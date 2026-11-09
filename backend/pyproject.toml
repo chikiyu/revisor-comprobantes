@@ -1,0 +1,4 @@
+[tool.pytest.ini_options]
+pythonpath = ["."]
+addopts = '-m "not integracion"'
+markers = ["integracion: llama al LLM de verdad (gasta cuota, necesita clave e internet)"]

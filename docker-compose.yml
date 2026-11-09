@@ -1,0 +1,29 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: revisor
+      POSTGRES_PASSWORD: revisor
+      POSTGRES_DB: comprobantes
+    volumes: [datos:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "revisor"]
+      interval: 2s
+      retries: 15
+
+  backend:
+    build: ./backend
+    env_file: .env
+    environment:
+      DATABASE_URL: postgresql+psycopg://revisor:revisor@db:5432/comprobantes
+    ports: ["127.0.0.1:8000:8000"]
+    depends_on:
+      db: {condition: service_healthy}
+
+  frontend:
+    build: ./frontend
+    ports: ["127.0.0.1:5173:80"]
+    depends_on: [backend]
+
+volumes:
+  datos:

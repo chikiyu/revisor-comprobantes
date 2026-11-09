@@ -1,0 +1,23 @@
+:root { font-family: system-ui, sans-serif; color: #1f2933; background: #f5f7fa; }
+body { margin: 0; }
+main { max-width: 1040px; margin: 0 auto; padding: 32px 16px; }
+h1 { margin: 0 0 4px; font-size: 26px; }
+.ayuda { margin: 0 0 20px; color: #52606d; }
+.acciones { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-bottom: 16px; }
+.boton { padding: 9px 16px; border-radius: 6px; background: #1f5fbf; color: #fff; font-size: 14px; cursor: pointer; text-decoration: none; }
+.boton.secundario { background: #fff; color: #1f5fbf; border: 1px solid #1f5fbf; padding: 8px 15px; }
+.boton.desactivado { background: #9aa5b1; cursor: wait; }
+.resumen { margin-left: auto; color: #52606d; font-size: 14px; }
+.error { padding: 10px 12px; border-radius: 6px; background: #fdecea; color: #a61b1b; font-size: 14px; }
+.tabla { overflow-x: auto; background: #fff; border-radius: 8px; border: 1px solid #e4e7eb; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #e4e7eb; vertical-align: top; }
+th { font-size: 12px; color: #52606d; text-transform: uppercase; letter-spacing: .03em; }
+tr:last-child td { border-bottom: 0; }
+tr.observado { background: #fff8f1; }
+small { display: block; color: #7b8794; }
+.monto { text-align: right; white-space: nowrap; }
+.etiqueta { padding: 2px 8px; border-radius: 10px; font-size: 12px; }
+.etiqueta.ok { background: #e3f9e5; color: #1b7a34; }
+.etiqueta.observado { background: #ffe8d1; color: #b44d12; }
+.vacio { text-align: center; color: #7b8794; padding: 28px; }
